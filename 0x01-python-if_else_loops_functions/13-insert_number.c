@@ -41,11 +41,16 @@ listint_t *insert_node(listint_t **head, int number)
 	else
 	{
 		/* EDGE case more than one node */
-		while (current->next->next != NULL)
+		while (current->next != NULL)
 		{
 			if (current->next->n > number)
 				break;
 			current = current->next;
+		}
+		/* EDGE case if insertion is in last node */
+		if (current->next == NULL)
+		{
+			 current->next = new;
 		}
 		new->next = current->next;
 		current->next = new;
