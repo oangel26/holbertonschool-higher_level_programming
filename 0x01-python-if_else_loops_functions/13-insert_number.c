@@ -41,7 +41,7 @@ listint_t *insert_node(listint_t **head, int number)
 	else
 	{
 		/* EDGE case more than one node */
-		while (current->next != NULL)
+		while (current->next->next != NULL)
 		{
 			if (current->next->n > number)
 				break;
