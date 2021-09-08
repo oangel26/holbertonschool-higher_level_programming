@@ -37,25 +37,38 @@ listint_t *insert_node(listint_t **head, int number)
 			new->next = *head;
 			*head = new;
 		}
+		else
+		{
+			(*head)->next = new;
+		}
 	}
 	else
 	{
-		/* EDGE case more than one node */
-		while (current->next != NULL)
+		/* EDGE case, first node number is greater */
+		if ((*head)->n > number)
 		{
-			if (current->next->n > number)
-				break;
-			current = current->next;
-		}
-		/* EDGE case if insertion is in last node */
-		if (current->next == NULL)
-		{
-			 current->next = new;
+			new->next = *head;
+			*head = new;
 		}
 		else
 		{
-		new->next = current->next;
-		current->next = new;
+			/* EDGE case more than one node */
+			while (current->next != NULL)
+			{
+				if (current->next->n > number)
+					break;
+				current = current->next;
+			}
+			/* EDGE case if insertion is in last node */
+			if (current->next == NULL)
+			{
+				current->next = new;
+			}
+			else
+			{
+				new->next = current->next;
+				current->next = new;
+			}
 		}
 	}
 	return (*head);
