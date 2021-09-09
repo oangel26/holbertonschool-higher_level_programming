@@ -21,7 +21,7 @@ if __name__ == "__main__":
             stdout.write("{} / {} = {}\n".format(a, b, div(a, b)))
             exit(0)
         else:
-            print("Unknown operator. Available operators: +, -, * and /\n")
+            print("Unknown operator. Available operators: +, -, * and /")
             exit(1)
     else:
         pass
