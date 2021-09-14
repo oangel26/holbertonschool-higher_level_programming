@@ -42,7 +42,7 @@ int is_palindrome(listint_t **head)
 			current = current->next;
 		}
 	}
-	else if (list_l % 3 == 0)
+	else
 	{
 		for (i = 0; i < (list_l - 1) / 2; i++)
 		{
