@@ -25,7 +25,6 @@ int is_palindrome(listint_t **head)
 		runner = runner->next;
 	}
 	list_l++;
-	printf("list_l = %d\n", list_l);
 	if (list_l % 2 == 0)
 	{
 		for (i = 0; i < list_l / 2; i++)
