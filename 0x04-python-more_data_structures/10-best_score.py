@@ -3,6 +3,9 @@ def best_score(a_dictionary):
     """Function that returns a key with the biggest integer value."""
     if a_dictionary is None or a_dictionary == {} or type(a_dictionary) != dict:
         return None
+
+    elif len(a_dictionary.keys()) == 1:
+        return list(a_dictionary.keys())[0]
     else:
         dict_sorted_keys = sorted(a_dictionary.keys())
         max_value = a_dictionary[dict_sorted_keys[0]]
@@ -13,7 +16,7 @@ def best_score(a_dictionary):
         return max_value_key
 
 if __name__ == "__main__":
-    a_dictionary = {'John': 12, 'Bob': 14, 'Mike': 14, 'Molly': 16, 'Adam': 10}
+    a_dictionary = {'John': 12}
     best_key = best_score(a_dictionary)
     print("Best score: {}".format(best_key))
 
