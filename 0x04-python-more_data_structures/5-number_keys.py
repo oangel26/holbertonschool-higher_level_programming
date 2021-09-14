@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def number_keys(a_dictionary):
     """Function that returns the number of keys in a dictionary."""
-    return len(a_dictionary)
+    return len(list(a_dictionary.keys()))
 
 if __name__ == "__main__":
     a_dictionary = { 'language': "C", 'number': 13, 'track': "Low level" }
