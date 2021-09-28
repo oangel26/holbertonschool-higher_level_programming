@@ -3,11 +3,12 @@ def safe_print_division(a, b):
     """ function that divides 2 integers and prints the result."""
     try:
         result = a / b
-        print("Inside result: {}".format(result))
         return (result)
     except:
-        print("Inside result: {}".format(None))
-        return None
+        result = None
+        return result
+    finally:
+        print("Inside result: {}".format(result))
 
 if __name__ == "__main__":
     a = 12
