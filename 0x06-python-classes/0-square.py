@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+# -*- coding: utf-8 -*-
+""" Module which represents the model of a Square """
 class Square:
-    """ Class that defines a square """
+    """ Class that creates the model of a square """
     pass
 
 
