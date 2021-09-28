@@ -16,6 +16,7 @@ def safe_print_list_integers(my_list=[], x=0):
     except IndexError as e:
         print(2)
 
+
 if __name__ == "__main__":
     my_list = [1, 2, 3, 4, 5]
 
