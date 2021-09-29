@@ -3,7 +3,7 @@
 """ Module which represents the model of a Square """
 
 
-class Square:
+class Square(object):
     """ Class that defines the model of a square """
     def __init__(self, size=0, position=(0, 0)):
         """ Constructor of the square:
@@ -19,6 +19,33 @@ class Square:
         """
         self.__size = size
         self.__position = position
+
+    @property
+    def size(self):
+        return self.__size
+
+    @property
+    def position(self):
+        return self.__position
+
+    @size.setter
+    def size(self, value):
+        if type(value) is not int:
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
+        else:
+            self.__size = value
+
+    @position.setter
+    def position(self, value):
+        if type(value[0]) is not int:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if type(value[1]) is not int:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        else:
+            self.__position = value
+
 
     def area(self):
         """ Public instance method
@@ -46,30 +73,6 @@ class Square:
                 for j in range(self.__size):
                     print("#", end="")
                 print()
-
-    @property
-    def size(self):
-        return self.__size
-
-    @property
-    def position(self):
-        return self.__position
-
-    @size.setter
-    def size(self, value):
-        if type(value) is not int:
-            raise TypeError("size must be an integer")
-        elif value < 0:
-            raise ValueError("size must be >= 0")
-        else:
-            self.__size = value
-
-    @position.setter
-    def position(self, value):
-        if value[0] is not int or value[1] is not int:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        else:
-            self.__position = value
 
 
 if __name__ == "__main__":
