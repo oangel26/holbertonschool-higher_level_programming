@@ -4,10 +4,16 @@
 
 class Rectangle:
     """ class that defines a rectangle """
-
     def __init__(self, width=0, height=0):
-        """ Instantination with optional width and height
-        constructor of the rectanglangle objects
+        """ Constructor of the rectanglangle objects
+
+        Args:
+        width (int): width of rectangle.
+        height (int): height of rectangle
+
+        Raises:
+        ValueError: if width or heigth is < 0.
+        TypeError: if width or heigth are not integers.
 
         """
         self.width = width
