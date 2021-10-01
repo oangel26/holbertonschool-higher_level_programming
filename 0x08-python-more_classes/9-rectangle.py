@@ -5,10 +5,8 @@
 class Rectangle:
     """ class that defines a rectangle """
 
-
     number_of_instances = 0
     print_symbol = "#"
-
 
     def __init__(self, width=0, height=0):
         """ Constructor of the rectanglangle objects
@@ -69,14 +67,14 @@ class Rectangle:
             return ""
         else:
             s = (((self.__width * str(self.print_symbol)) + "\n") *
-            (self.__height - 1))
+                 (self.__height - 1))
             s += (self.__width * str(self.print_symbol))
             return s
 
     def __repr__(self):
         s = (str(self.__class__.__name__) +
-        '(' + str(self.__dict__['_Rectangle__width']) + ', '
-             + str(self.__dict__['_Rectangle__height']) + ')')
+             '(' + str(self.__dict__['_Rectangle__width']) + ', ' +
+             str(self.__dict__['_Rectangle__height']) + ')')
         return s
 
     def __del__(self):
@@ -104,5 +102,6 @@ class Rectangle:
 
 if __name__ == "__main__":
     my_square = Rectangle.square(5)
-    print("Area: {} - Perimeter: {}".format(my_square.area(), my_square.perimeter()))
+    print("Area: {} - Perimeter: {}".format(my_square.area(),
+                                            my_square.perimeter()))
     print(my_square)
