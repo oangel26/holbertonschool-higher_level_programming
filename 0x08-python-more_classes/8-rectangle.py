@@ -5,10 +5,8 @@
 class Rectangle:
     """ class that defines a rectangle """
 
-
     number_of_instances = 0
     print_symbol = "#"
-
 
     def __init__(self, width=0, height=0):
         """ Constructor of the rectanglangle objects
@@ -69,14 +67,14 @@ class Rectangle:
             return ""
         else:
             s = (((self.__width * str(self.print_symbol)) + "\n") *
-            (self.__height - 1))
+                 (self.__height - 1))
             s += (self.__width * str(self.print_symbol))
             return s
 
     def __repr__(self):
         s = (str(self.__class__.__name__) +
-        '(' + str(self.__dict__['_Rectangle__width']) + ', '
-             + str(self.__dict__['_Rectangle__height']) + ')')
+             '(' + str(self.__dict__['_Rectangle__width']) + ', ' +
+             str(self.__dict__['_Rectangle__height']) + ')')
         return s
 
     def __del__(self):
@@ -97,20 +95,21 @@ class Rectangle:
         else:
             return rect_2
 
-        
+
 if __name__ == "__main__":
     my_rectangle_1 = Rectangle(8, 4)
     my_rectangle_2 = Rectangle(2, 3)
 
-    if my_rectangle_1 is Rectangle.bigger_or_equal(my_rectangle_1, my_rectangle_2):
+    if my_rectangle_1 is Rectangle.bigger_or_equal(my_rectangle_1,
+                                                   my_rectangle_2):
         print("my_rectangle_1 is bigger or equal to my_rectangle_2")
     else:
         print("my_rectangle_2 is bigger than my_rectangle_1")
 
-
     my_rectangle_2.width = 10
     my_rectangle_2.height = 5
-    if my_rectangle_1 is Rectangle.bigger_or_equal(my_rectangle_1, my_rectangle_2):
+    if my_rectangle_1 is Rectangle.bigger_or_equal(my_rectangle_1,
+                                                   my_rectangle_2):
         print("my_rectangle_1 is bigger or equal to my_rectangle_2")
     else:
         print("my_rectangle_2 is bigger than my_rectangle_1")
