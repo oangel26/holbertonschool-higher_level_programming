@@ -57,13 +57,16 @@ class Rectangle:
             return ((self.__height + self.__width) * 2)
 
     def __str__(self):
-        s = ((self.__width * "#") + "\n") * (self.__height - 1)
-        s += (self.__width * "#")
+        if self.__height == 0 or self.__width == 0:
+            s = ""
+        else:
+            s = ((self.__width * "#") + "\n") * (self.__height - 1)
+            s += (self.__width * "#")
         return s
 
 
 if __name__ == "__main__":
-    my_rectangle = Rectangle(2, 4)
+    my_rectangle = Rectangle(0, 4)
     print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
 
     print(str(my_rectangle))
