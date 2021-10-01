@@ -70,7 +70,7 @@ class Rectangle:
              str(self.__dict__['_Rectangle__height']) + ')')
         return s
 
-    
+
 if __name__ == "__main__":
     my_rectangle = Rectangle(2, 4)
     print(str(my_rectangle))

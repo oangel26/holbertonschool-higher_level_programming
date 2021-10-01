@@ -66,8 +66,8 @@ class Rectangle:
 
     def __repr__(self):
         s = (str(self.__class__.__name__) +
-        '(' + str(self.__dict__['_Rectangle__width']) + ', '
-             + str(self.__dict__['_Rectangle__height']) + ')')
+        '(' + str(self.__dict__['_Rectangle__width']) + ', ' +
+        str(self.__dict__['_Rectangle__height']) + ')')
         return s
 
     def __del__(self):
@@ -76,7 +76,8 @@ class Rectangle:
 
 if __name__ == "__main__":
     my_rectangle = Rectangle(2, 4)
-    print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
+    print("Area: {} - Perimeter: {}".format(my_rectangle.area(),
+                                            my_rectangle.perimeter()))
 
     del my_rectangle
 
