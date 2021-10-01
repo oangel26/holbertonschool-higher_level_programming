@@ -67,7 +67,7 @@ class Rectangle:
             return ""
         else:
             s = (((self.__width * str(self.print_symbol)) + "\n") *
-            (self.__height - 1))
+                 (self.__height - 1))
             s += (self.__width * str(self.print_symbol))
             return s
 
