@@ -3,18 +3,20 @@ def safe_print_list_integers(my_list=[], x=0):
     """ function that prints the first x elements
     of a list and only integers
     """
-    try:
-        count = 0
-        for i in range(x):
-            if type(my_list[i]) == int:
-                count += 1
-                print("{:d}".format(my_list[i]), end="")
-            else:
-                continue
-        print()
-        return (count)
-    except IndexError:
-        print("List index out of range")
+    count = 0
+    for i in range(x):
+        count += 1
+        try:
+           if count <= x:
+               pass
+        except IndexError("list index out of range"):
+
+                if type(my_list[i]) is int:
+                    print("{:d}".format(my_list[i]), end="")
+                else:
+                    continue
+    print()
+    return (count)
 
 
 if __name__ == "__main__":
@@ -29,4 +31,3 @@ if __name__ == "__main__":
 
     nb_print = safe_print_list_integers(my_list, len(my_list) + 2)
     print("nb_print: {:d}".format(nb_print))
-
