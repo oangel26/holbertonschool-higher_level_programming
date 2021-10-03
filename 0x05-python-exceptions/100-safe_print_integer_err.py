@@ -6,7 +6,7 @@ def safe_print_integer_err(value):
         print("{:d}".format(value))
         return True
     except Exception as e:
-        sys.stderr.write(str(e) + '\n')
+        sys.stderr.write("{}\n".format(str(e)))
         return False
 
 if __name__ == "__main__":
