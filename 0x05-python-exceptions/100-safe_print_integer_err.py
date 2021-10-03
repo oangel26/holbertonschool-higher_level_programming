@@ -9,6 +9,7 @@ def safe_print_integer_err(value):
         sys.stderr.write("Exception: {}\n".format(str(e)))
         return False
 
+
 if __name__ == "__main__":
     value = 89
     has_been_print = safe_print_integer_err(value)
