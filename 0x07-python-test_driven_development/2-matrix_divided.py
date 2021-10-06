@@ -56,45 +56,8 @@ def matrix_divided(matrix, div):
 
 if __name__ == "__main__":
     matrix = [
-    [1, 2, 3],
-    [4, 5, 6]
+        [1, 2, 3],
+        [4, 5, 6]
     ]
     print(matrix_divided(matrix, 3))
     print(matrix)
-
-    """
-    matrix = [
-    [1, 2, 3],
-    [4, 5, 6]
-    ]
-    print(matrix_divided(matrix, 0))
-    print(matrix)
-
-    matrix = [
-    [1, 2, 3],
-    [4, 5, 6]
-    ]
-    print(matrix_divided(matrix, None))
-    print(matrix)
-
-    matrix = [
-    [1, 2, 3],
-    [4, 5, 6]
-    ]
-    print(matrix_divided(matrix, ))
-    print(matrix)
-
-    matrix = [
-    [1, 2, 3],
-    [4, 5, 6]
-    ]
-    print(matrix_divided(matrix, -1))
-    print(matrix)
-
-    matrix = [
-    [1, 2, 3],
-    [4, 5]
-    ]
-    print(matrix_divided(matrix, 3))
-    print(matrix)
-    """
