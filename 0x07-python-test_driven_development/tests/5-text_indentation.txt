@@ -1,0 +1,159 @@
+===============================
+ The ``text_indentation`` Module
+===============================
+
+Using ``text_indentation(text)``.
+
+``text_indentation(text)`` prints a text with 2 new lines after each of these characters: ., ? and :
+
+--------------------------------------------------------------------
+
+import the function text_indentation from the module 5-text_indentation
+
+	   >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+--------------------------------------------------------------------
+
+Numbers in <text>
+============
+
+Integers (positive)
+
+	>>> text_indentation(1)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+
+Integers (negative)
+
+	>>> text_indentation(-1)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+Integers (zero)
+
+	>>> text_indentation(0)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+Float
+
+	>>> text_indentation(1.4)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+Complex
+
+	>>> text_indentation(2 + 5j)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+
+
+Strings
+===================
+
+One space after: ., ?, or :
+
+	>>> text_indentation("hola. como estas")
+	hola.
+	<BLANKLINE>
+	como estas
+
+	>>> text_indentation("hola: como estas")
+	hola:
+	<BLANKLINE>
+	como estas
+
+	>>> text_indentation("hola? como estas")
+	hola?
+	<BLANKLINE>
+	como estas
+
+
+More than one space after: ., ?, or :
+_____________________________________
+
+	>>> text_indentation("2hola.  como estas")
+	2hola.
+	<BLANKLINE>
+	como estas
+
+	>>> text_indentation("4hola:    como estas")
+	4hola:
+	<BLANKLINE>
+	como estas
+
+	>>> text_indentation("5hola?     como estas")
+	5hola?
+	<BLANKLINE>
+	como estas
+
+	>>> text_indentation("8hola?        como estas")
+	8hola?
+	<BLANKLINE>
+	como estas
+
+	>>> text_indentation("9hola?         como estas")
+ 	9hola?
+	<BLANKLINE>
+	como estas
+
+	>>> text_indentation("10hola?          como estas")
+ 	10hola?
+	<BLANKLINE>
+	como estas
+
+	>>> text_indentation("11hola?                                                                                                         como estas")
+ 	11hola?
+	<BLANKLINE>
+	como estas
+
+Empty argument
+=================
+
+	>>> text_indentation()
+	Traceback (most recent call last):
+	TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+
+
+Non-Numbers in <text>
+===================
+
+
+Lists
+
+	>>> text_indentation([1, 2, 3])
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+Tuple
+
+	>>> text_indentation((1, 2))
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+Dictionary
+
+	>>> text_indentation({'a': 1})
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+Sets
+
+	>>> text_indentation({1, 2, 3})
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+Boolean
+
+	>>> text_indentation(True)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+None
+
+	>>> text_indentation(None)
+	Traceback (most recent call last):
+	TypeError: text must be a string

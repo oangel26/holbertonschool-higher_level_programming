@@ -1,0 +1,108 @@
+===============================
+ The ``print_square`` Module
+===============================
+
+Using ``print_square(size)``.
+
+``print_square(size)`` prints a squere with the character #
+
+--------------------------------------------------------------------
+
+import the function print_square from the module 4-print_square
+
+	   >>> print_square = __import__('4-print_square').print_square
+
+--------------------------------------------------------------------
+
+Numbers in size
+============
+
+Integers (positive)
+
+	>>> print_square(1)
+	#
+
+Integers (negative)
+
+	>>> print_square(-1)
+	Traceback (most recent call last):
+	ValueError: size must be >= 0
+
+Integers (zero)
+
+	>>> print_square(0)
+
+Integers (negative zero
+
+	>>> print_square(-0)
+
+Float
+
+	>>> print_square(1.0)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+Negative Float
+
+	 >>> print_square(-1.0)
+	 Traceback (most recent call last):
+	 TypeError: size must be an integer
+
+Complex
+
+	>>> print_square(2 + 5j)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+Non-Numbers in first_name
+===============
+
+
+Strings
+
+	>>> print_square('a')
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+Lists
+
+	>>> print_square([1, 2])
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+Tuple
+
+	>>> print_square((1, 2))
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+Dictionary
+
+	>>> print_square({'a': 1})
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+Sets
+
+	>>> print_square({1, 2, 3})
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+Boolean
+
+	>>> print_square(True)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+None
+
+	>>> print_square(None)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+Empty arguments
+================
+
+	>>> print_square()
+	Traceback (most recent call last):
+	TypeError: print_square() missing 1 required positional argument: 'size'

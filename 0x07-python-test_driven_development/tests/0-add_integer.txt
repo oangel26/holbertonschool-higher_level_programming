@@ -10,49 +10,54 @@ Using ``add_integer(a, b=98)``.
 
 import the function add_integer	from the module	0-add_integer
 
->>> from 0x07-python-test_driven_development.add_integer import add_integer
+	   >>> add_integer = __import__('0-add_integer').add_integer
 
+empty in b
+============
+
+	>>> add_integer(2)
+	100
 
 None in a
 ============
 
->>> add_integer(None, 3)
-Traceback (most recent call last):
-TypeError: a must be an integer
+	>>> add_integer(None, 3)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
 
 Numbers in a
 ============
 
 Integers (positive)
 
->>> add_integer(2, 3)
-5
+	>>> add_integer(2, 3)
+	5
 
 Integers (negative)
 
->>> add_integer(-2, 3)
-1
+	>>> add_integer(-2, 3)
+	1
 
 Integers (zero)
 
->>> add_integer(0, 3)
-3
+	>>> add_integer(0, 3)
+	3
 
 Integers (negative zero)
 
->>> add_integer(-0, 3)
-3
+	>>> add_integer(-0, 3)
+	3
 
 Float
 
->>> add_integer(2.0, 3)
-5
+	>>> add_integer(2.2, 3)
+	5
 
 Complex
 
->>> add_integer(2 + 5j, 3)
-Traceback (most recent call last):
-TypeError: a must be an integer
+	>>> add_integer(2 + 5j, 3)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
 
 
 Non-Numbers in a
@@ -61,34 +66,55 @@ Non-Numbers in a
 
 Strings
 
->>> add_integer('a', 3)
-Traceback (most recent call last):
-TypeError: a must be an integer
+	>>> add_integer('a', 3)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
 
 Lists
 
->>> add_integer(['A', 'B', 'C'], 2)
-Traceback (most recent call last):
-TypeError: a must be an integer
+	>>> add_integer(['A', 'B', 'C'], 2)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
 
 Tuple
 
->>> add_integer((2, 4), 3)
-Traceback (most recent call last):
-TypeError: a must be an integer
+	>>> add_integer((2, 4), 3)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
 
 Dictionary
 
->>> add_integer({'a': 1, 'b': 2}, 2)
-Traceback (most recent call last):
-TypeError: a must be an integer
+	>>> add_integer({'a': 1, 'b': 2}, 2)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
 
+Sets
+
+	>>> add_integer({1, 2, 3}, 2)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+Booleans
+
+	>>> add_integer(True, 2)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+	
 
 None in b
 ============
 
->>> add_integer(2, None)
-100
+	>>> add_integer(2, None)
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+ empty in b
+ ============
+
+
+	>>> add_integer(2, )
+  	100
+
 
 Numbers in b
 ============
@@ -96,34 +122,34 @@ Numbers in b
 
 Integers (positive)
 
->>> add_integer(2, 3)
-5
+	>>> add_integer(2, 3)
+	5
 
 Integers (negative)
 
->>> add_integer(3, -2)
-1
+	>>> add_integer(3, -2)
+	1
 
 Integers (zero)
 
->>> add_integer(3, 0)
-3
+	>>> add_integer(3, 0)
+	3
 
 Integers (negative zero)
 
->>> add_integer(3, -0)
-3
+	>>> add_integer(3, -0)
+	3
 
 Float
 
->>> add_integer(3, 2.0)
-5
+	>>> add_integer(3, 2.2)
+	5
 
 Complex
 
->>> add_integer(3, 2 + 5j)
-Traceback (most recent call last):
-TypeError: b must be an integer
+	>>> add_integer(3, 2 + 5j)
+	Traceback (most recent call last):
+	TypeError: b must be an integer
 
 
 Non-Numbers in b
@@ -132,49 +158,60 @@ Non-Numbers in b
 
 Strings
 
->>> add_integer(3, 'a')
-Traceback (most recent call last):
-TypeError: b must be an integer
+	>>> add_integer(3, 'a')
+	Traceback (most recent call last):
+	TypeError: b must be an integer
 
 Lists
 
->>> add_integer(3, ['A', 'B', 'C'])
-Traceback (most recent call last):
-TypeError: b must be an integer
+	>>> add_integer(3, ['A', 'B', 'C'])
+	Traceback (most recent call last):
+	TypeError: b must be an integer
 
 Tuple
 
->>> add_integer(3, (2, 4))
-Traceback (most recent call last):
-TypeError: b must be an integer
+	>>> add_integer(3, (2, 4))
+	Traceback (most recent call last):
+	TypeError: b must be an integer
 
 Dictionary
 
->>> add_integer(2, {'a': 1, 'b': 2})
-Traceback (most recent call last):
-TypeError: b must be an integer
+	>>> add_integer(2, {'a': 1, 'b': 2})
+	Traceback (most recent call last):
+	TypeError: b must be an integer
 
+Sets
 
+	>>> add_integer(2, {1, 2, 3})
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+Boolens
+
+	>>> add_integer(2, True)
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+	
 
 Both parameters a and b
 ======================
 
 None
 
->>> add_integer(None)
-Traceback (most recent call last):
-TypeError: a must be an integer
+	>>> add_integer(None)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
 
 Integeres (negative zero)
 
->>> add_integer(-0, 0)
-0
+	>>> add_integer(-0, 0)
+	0
 
->>> add_integer(0, -0)
-0
+	>>> add_integer(0, -0)
+	0
 
->>> add_integer(-0, -0)
-0
+	>>> add_integer(-0, -0)
+	0
 
->>> add_integer(0, -0)
-0
+	>>> add_integer(0, -0)
+	0
