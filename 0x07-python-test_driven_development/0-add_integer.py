@@ -1,6 +1,7 @@
-e#!/usr/bin/python3
+#!/usr/bin/python3
 """ Module containing integers addition functions """
 import doctest
+
 
 def add_integer(a, b=98):
     """ Function that adds 2 integers
