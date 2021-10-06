@@ -25,6 +25,7 @@ def say_my_name(first_name, last_name=""):
     else:
         print(message.format(first_name=first_name, last_name=last_name))
 
+
 if __name__ == "__main__":
     say_my_name("John", "Smith")
     say_my_name("Walter", "White")
