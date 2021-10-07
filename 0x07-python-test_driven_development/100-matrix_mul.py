@@ -47,5 +47,6 @@ def matrix_mul(m_a, m_b):
         new_matrix.append(new_row)
     return (new_matrix)
 
+
 if __name__ == "__main__":
     print(matrix_mul([[1, 2]], [[1, 2], [1, 2, 3]]))
