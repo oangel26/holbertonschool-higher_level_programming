@@ -1,0 +1,93 @@
+===============================
+ The ``7-base_geometry`` Module
+===============================
+
+Using ``integer_validator(self, name, value)`` valiadates value
+
+--------------------------------------------------------------------
+
+import the class BaseGeometry from the module 7-base_geometry
+
+	   >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+
+	   >>> bg = BaseGeometry()
+
+Testing for Value
+-----------------------------
+
+Numbers
+============
+
+Integers (positive)
+
+	>>> bg.integer_validator("my_int", 12)
+
+Integers (negative)
+
+	>>> bg.integer_validator("my_int", -12)
+	Traceback (most recent call last):
+	ValueError: my_int must be greater than 0
+
+Integers (negative)
+
+>>> bg.integer_validator("my_int", 0)
+Traceback (most recent call last):
+ValueError: my_int must be greater than 0
+
+Floats (positive)
+
+	>>> bg.integer_validator("my_int", -1.2)
+	Traceback (most recent call last):
+	TypeError: my_int must be an integer
+
+Floats (negative)
+
+>>> bg.integer_validator("my_int", 1.2)
+Traceback (most recent call last):
+TypeError: my_int must be an integer
+
+Complex
+
+>>> bg.integer_validator("my_int", 2 + 5j)
+Traceback (most recent call last):
+TypeError: my_int must be an integer
+
+Non Numbers
+================
+
+Dictionary
+
+>>> bg.integer_validator("my_int", {'a': 1})
+Traceback (most recent call last):
+TypeError: my_int must be an integer
+
+
+Sets
+
+>>> bg.integer_validator("my_int", {1, 2, 3})
+Traceback (most recent call last):
+TypeError: my_int must be an integer
+
+
+Tupls
+
+>>> bg.integer_validator("my_int", (1, 2))
+Traceback (most recent call last):
+TypeError: my_int must be an integer
+
+
+
+List
+
+>>> bg.integer_validator("my_int", [1, 2, 3])
+Traceback (most recent call last):
+TypeError: my_int must be an integer
+
+
+Boolean
+
+
+>>> bg.integer_validator("my_int", True)
+Traceback (most recent call last):
+TypeError: my_int must be an integer
