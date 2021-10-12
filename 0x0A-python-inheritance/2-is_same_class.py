@@ -13,8 +13,9 @@ def is_same_class(obj, a_class):
     Returns:
     returns True if the object is exactly an instance, otherwise False
     """
-    if ((obj.__class__ is a_class) and isinstance(obj, a_class)):
-        return (True)
+    if (isinstance(obj, a_class)):
+        if (obj.__class__ is a_class):
+            return (True)
 
 
 if __name__ == "__main__":
