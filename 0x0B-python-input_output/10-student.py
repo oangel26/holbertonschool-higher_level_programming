@@ -26,4 +26,3 @@ class Student:
         else:
             return (self.__dict__)
         return (new_dict)
-
