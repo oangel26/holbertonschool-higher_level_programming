@@ -14,8 +14,5 @@ try:
     for i in range(1, len(argv)):
         my_list.append(argv[i])
     save_to_json_file(my_list, filename)
-except:
+except Exception as e:
     save_to_json_file(list_obj, filename)
-
-
-
