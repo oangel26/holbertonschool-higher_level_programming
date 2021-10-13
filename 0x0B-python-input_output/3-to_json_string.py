@@ -1,4 +1,4 @@
-#!/usr/bin/python2
+#!/usr/bin/python3
 """Module that returns the JSON representation of an object"""
 import json
 
