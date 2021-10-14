@@ -21,6 +21,7 @@ def is_same_class(obj, a_class):
     else:
         return (False)
 
+
 if __name__ == "__main__":
     a = 1
     if is_same_class(a, int):
@@ -47,4 +48,3 @@ if __name__ == "__main__":
     a = [1, 2, 3]
     if is_same_class(a, object):
         print("{} is an instance of the class {}".format(a, object.__name__))
-    
