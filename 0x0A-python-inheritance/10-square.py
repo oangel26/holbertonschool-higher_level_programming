@@ -12,7 +12,7 @@ class Square(Rectangle):
 
     def integer_validator(self, name, value):
         super().integer_validator("size", size)
- 
+
     def area(self):
         """ Public instance method that return the area of a Square """
         return (super().area())
