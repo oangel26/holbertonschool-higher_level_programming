@@ -25,3 +25,30 @@ Integers (positive)
 	>>> my_list.append(5)
 	>>> my_list.print_sorted()
 	[1, 2, 3, 4, 5]
+
+Integers (negative)
+	>>> my_list1 = MyList()
+    >>> my_list1.append(-1)
+    >>> my_list1.append(-2)
+	>>> my_list1.append(-5)
+    >>> my_list1.append(0)
+    >>> my_list1.append(1)
+    >>> my_list1.print_sorted()
+    [-5, -2, -1, 0, 1]
+
+Empty list
+	>>> my_list2 = MyList()
+	>>> my_list2.print_sorted()
+	[]
+
+New List
+	>>> my_list3 = MyList()
+	>>> my_list3.append(-1)
+	>>> my_list3.append(-2)
+	>>> my_list3.append(-5)
+    >>> my_list3.append(0)
+    >>> my_list3.append(1)
+	>>> (print(my_list3) is my_list3.print_sorted())
+	[-1, -2, -5, 0, 1]
+	False
+
