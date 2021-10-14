@@ -9,8 +9,7 @@ class MyList(list):
         """ public instance method that prints the list,
         but sorted (ascending sort)
         """
-        new_list = sorted(self)
-        return(new_list)
+        return(sorted(self))
 
 
 if __name__ == "__main__":
