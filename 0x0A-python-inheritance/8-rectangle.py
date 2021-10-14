@@ -29,7 +29,7 @@ class BaseGeometry:
 
 
 class Rectangle(BaseGeometry):
-    """ Class that represents a Rectangle """
+    """Subclass of BaseGeometry that represents a Rectangle """
 
     def __init__(self, width, height):
         """ Constructor method of Rectangle class objects """
@@ -40,6 +40,11 @@ class Rectangle(BaseGeometry):
 
 
 if __name__ == "__main__":
+
+
+    print(issubclass(Rectangle, BaseGeometry))
+
+
     r = Rectangle(3, 5)
 
     print(r)
