@@ -13,16 +13,6 @@ class Square(Rectangle, BaseGeometry):
         super().integer_validator("size", self.__size)
         super().__init__(self.__size, self.__size)
 
-
-    """
-    def integer_validator(self, name, value):
-        Public instance method that validates value
-
-    if type(value) is not int:
-            raise TypeError("{} must be an integer".format(name))
-        if value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
-    """
     def area(self):
         """ Public instance method that return the area of a Square """
         return (super().area())
