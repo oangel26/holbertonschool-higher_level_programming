@@ -65,7 +65,6 @@ class Rectangle(Base):
         """Public method that returns the area of the Rectangele"""
         return(self.__width * self.__height)
 
-
     def display(self):
         """
         Public method that prints in stdout the Rectangle instance

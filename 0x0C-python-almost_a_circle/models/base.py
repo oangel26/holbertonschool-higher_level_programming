@@ -46,7 +46,7 @@ class Base:
         for i in list_objs:
             dict_list.append(i.to_dictionary())
         filename = "{}.json".format(cls.__name__)
-        with open(filename,'w', encoding="UTF8") as f:
+        with open(filename, 'w', encoding="UTF8") as f:
             f.write(cls.to_json_string(dict_list))
 
     @classmethod
@@ -88,14 +88,7 @@ class Base:
                 reader = csv.reader(f)
                 for i in reader:
                     list_of_instances.append(i)
-                print(list_of_instances)
-                print("reader")
-                print(type(reader))
-                print (reader)
-                mydict = dict(reader)
-                print("mydict")
-                print(type(mydict))
-                print (mydict)
+                return (list_of_instances)
         except Exception as e:
             return([])
 
@@ -111,49 +104,5 @@ class Base:
         with open(filename, 'w', encoding="UTF8") as f:
             writer = csv.writer(f, delimiter=':')
             for i in dict_list:
-
                 for key, value in i.items():
                     writer.writerow([key, value])
-
-
-
-if __name__ == "__main__":
-    from rectangle import Rectangle
-    from square import Square
-
-    r1 = Rectangle(10, 7, 2, 8)
-    r2 = Rectangle(2, 4)
-    list_rectangles_input = [r1, r2]
-
-    Rectangle.save_to_file_csv(list_rectangles_input)
-
-    list_rectangles_output = Rectangle.load_from_file_csv()
-
-    for rect in list_rectangles_input:
-        print("[{}] {}".format(id(rect), rect))
-
-    print("---")
-
-    for rect in list_rectangles_output:
-        print("[{}] {}".format(id(rect), rect))
-
-    print("---")
-    print("---")
-
-    s1 = Square(5)
-    s2 = Square(7, 9, 1)
-    list_squares_input = [s1, s2]
-
-    Square.save_to_file_csv(list_squares_input)
-
-    list_squares_output = Square.load_from_file_csv()
-
-    for square in list_squares_input:
-        print("[{}] {}".format(id(square), square))
-
-    print("---")
-
-    for square in list_squares_output:
-        print("[{}] {}".format(id(square), square))
-
-

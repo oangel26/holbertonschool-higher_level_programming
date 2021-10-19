@@ -42,7 +42,7 @@ class Square(Rectangle):
                 if i == 3:
                     self.y = args[i]
         if kwargs is not None:
-             for key, value in kwargs.items():
+            for key, value in kwargs.items():
                 if key == "id":
                     self.id = value
                 if key == "size":
@@ -58,19 +58,4 @@ class Square(Rectangle):
         representation of a Square
         """
         return {'id': self.id, 'size': self.__size,
-                    'x': self.x, 'y': self.y}
-
-if __name__ == "__main__":
-
-    s1 = Square(10, 2, 1)
-    print(s1)
-    s1_dictionary = s1.to_dictionary()
-    print(s1_dictionary)
-    print(type(s1_dictionary))
-
-    s2 = Square(1, 1)
-    print(s2)
-    s2.update(**s1_dictionary)
-    print(s2)
-    print(s1 == s2)
-
+                'x': self.x, 'y': self.y}
