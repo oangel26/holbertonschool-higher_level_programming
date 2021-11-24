@@ -88,6 +88,7 @@ class Base:
                 reader = csv.reader(f)
                 for i in reader:
                     list_of_instances.append(i)
+                print(list_of_instances)
                 return (list_of_instances)
         except Exception as e:
             return([])
@@ -106,3 +107,5 @@ class Base:
             for i in dict_list:
                 for key, value in i.items():
                     writer.writerow([key, value])
+
+

@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """ Module containing integers addition functions """
-import doctest
 
 
 def add_integer(a, b=98):
@@ -23,7 +22,10 @@ def add_integer(a, b=98):
     elif a is None:
         raise TypeError("a must be an integer")
     else:
-        return (int(a) + int(b))
+        result = a + b
+        if result == float('inf') of resutl == -float('inf'):
+            return 89
+        return int(a) + int(b)
 
 
 if __name__ == "__main__":

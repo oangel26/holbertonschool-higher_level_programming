@@ -99,7 +99,7 @@ Booleans
 	>>> add_integer(True, 2)
 	Traceback (most recent call last):
 	TypeError: a must be an integer
-	
+
 
 None in b
 ============
@@ -108,8 +108,17 @@ None in b
 	Traceback (most recent call last):
 	TypeError: b must be an integer
 
- empty in b
- ============
+Empty in a
+=====================
+
+	>>> add_integer()
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+
+
+ Empty in b
+==================
 
 
 	>>> add_integer(2, )

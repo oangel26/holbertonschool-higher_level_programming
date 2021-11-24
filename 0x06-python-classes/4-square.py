@@ -29,10 +29,12 @@ class Square:
 
     @property
     def size(self):
+        print("paso por getter size")
         return self.__size
 
     @size.setter
     def size(self, value):
+        print("paso por setter size")
         if type(value) is not int:
             raise TypeError("size must be an integer")
         elif value < 0:
@@ -47,6 +49,7 @@ if __name__ == "__main__":
 
     my_square.size = 3
     print("Area: {} for size: {}".format(my_square.area(), my_square.size))
+
 
     try:
         my_square.size = "5 feet"
