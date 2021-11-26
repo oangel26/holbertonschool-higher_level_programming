@@ -2,4 +2,5 @@
 -- Each record should display: cities.id - cities.name - states.name
 -- Results must be sorted in ascending order by cities.id
 SELECT cities.id, cities.name, states.name
+FROM cietes, states
 ORDER BY cities.id ASC;
