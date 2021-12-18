@@ -6,7 +6,6 @@ if __name__ == "__main__":
     import MySQLdb
     from sys import argv
 
-
     # Use de Python-DB API to connect to MySQL database server
     db = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
                          passwd=argv[2], db=argv[3], charset="utf8")
@@ -17,4 +16,4 @@ if __name__ == "__main__":
     cur.execute("SELECT * FROM states ORDER BY states.id ASC")
     rows = cur.fetchall()
     for row in rows:
-        print ("({}, '{}')".format(row[0], row[1]))
+        print("({}, '{}')".format(row[0], row[1]))
