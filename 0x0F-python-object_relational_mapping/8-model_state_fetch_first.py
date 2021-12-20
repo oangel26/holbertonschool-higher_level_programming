@@ -17,6 +17,9 @@ if __name__ == "__main__":
     session = Session()
     # Using Python array slices and typically in conjunction with ORDER BY
     instance = session.query(State).order_by(State.id).first()
-    print("{}: {}".format(instance.id, instance.name))
+    if (instance != None):
+        print("{}: {}".format(instance.id, instance.name))
+    else:
+        print("Nothing")
 
     session.close()
