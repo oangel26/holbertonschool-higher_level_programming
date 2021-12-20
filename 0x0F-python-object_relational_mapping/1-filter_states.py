@@ -11,7 +11,7 @@ if __name__ == "__main__":
 
     # Use de Python-DB API to connect to MySQL database server
     db = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
-                         passwd=argv[2], db=argv[3], charset="utf8")
+                         passwd=argv[2], db=argv[3])
     # Cursor object which gives the ability to have multiple envirionments
     cur = db.cursor()
 
