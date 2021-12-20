@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3.9
+#!/usr/bin/python3
 """
 Module that contains the class definition of a State and an
 instance Base = declarative_base():
