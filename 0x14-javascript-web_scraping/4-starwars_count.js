@@ -9,7 +9,10 @@ const request = require('request');
 
 let count = 0;
 request(args[2], function (err, request) {
-  if (err) throw err;
+  if (err) {
+    console.error(err);
+    return;
+  }
   const data = JSON.parse(request.body);
   for (const film in data.results) {
     for (const character in film.characters) {
