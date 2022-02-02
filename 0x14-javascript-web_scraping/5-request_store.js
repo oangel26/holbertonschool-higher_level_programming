@@ -5,14 +5,6 @@ that gets the contents of a webpage and stores it in a file.
 
 const args = process.argv;
 const request = require('request');
+const fs = require('fs');
 
-request(args[2], function (err, request) {
-  if (err) throw err;
-  const data = JSON.parse(request.body);
-  const fs = require('fs');
-  try {
-    fs.writeFileSync(args[3], data, 'utf8');
-  } catch (err) {
-    console.error(err);
-  }
-});
+request(args[2]).pipe(fs.createWriteStream(args[3]));
