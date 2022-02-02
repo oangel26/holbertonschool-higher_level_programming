@@ -9,17 +9,13 @@ const request = require('request');
 
 let count = 0;
 request(args[2], function (err, request) {
-  if (err) {
-    console.error(err);
-    return;
-  }
+  if (err) throw err;
   const data = JSON.parse(request.body);
-  for (const film in data.results) {
-    for (const character in film.characters) {
-      if (character === 'https://swapi-api.hbtn.io/api/people/18/') {
-        count++;
-      }
-    }
-  }
+  data.results.forEach(movieList => {
+    movieList.characters.forEach(characterList => {
+      const url = characterList;
+      if (url.indexOf('18') !== -1) { count++; }
+    });
+  });
   console.log(count);
 });
