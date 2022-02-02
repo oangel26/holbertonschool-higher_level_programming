@@ -8,8 +8,8 @@ const args = process.argv;
 const request = require('request');
 const url = 'https://swapi-api.hbtn.io/api/films/'
 
-const data = request(url + args[2], function (err, response) {
+request(url + args[2], function (err, response) {
   if (err) throw err;
+  const data = JSON.parse(request.body);
+  console.log(data['title']);
 });
-
-console.log(data.title)
